@@ -8,6 +8,9 @@ connectDB();
 
 app.use(cors());
 app.use(express.json());
+app.get("/", (req, res) => {
+    res.send("Hello Developer, Backend is Running ✅");
+  });
 
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/jobs', require('./routes/jobs'));
